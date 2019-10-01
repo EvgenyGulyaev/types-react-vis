@@ -1,0 +1,28 @@
+{
+  "name": "react-vis-types",
+  "types": "index.d.ts",
+  "version": "0.0.2",
+  "description": "Types for react-vis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyGulyaev/types-react-vis.git"
+  },
+  "keywords": [
+    "TS",
+    "typescript"
+  ],
+  "author": "Evgeny Gulyaev (wardercompany@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyGulyaev/types-react-vis/issues"
+  },
+  "homepage": "https://github.com/EvgenyGulyaev/types-react-vis#readme",
+  "dependencies": {
+    "@types/react": "*",
+    "react-vis": "^1.11.7"
+  }
+}
