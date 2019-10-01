@@ -4,7 +4,6 @@ declare module 'react-vis' {
         Component,
         PureComponent,
         ReactChild,
-        ReactNode,
         SFC,
         MouseEventHandler,
         TouchEventHandler,
