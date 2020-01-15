@@ -196,7 +196,7 @@ declare module 'react-vis' {
     export interface SunburstPoint extends AbstractSeriesPoint {
         title: string;
         size: number;
-        color?: number;
+        color?: string;
         label?: string;
         labelStyle?: CSSProperties;
         dontRotateLabel?: boolean;
