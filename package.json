@@ -1,7 +1,7 @@
 {
   "name": "react-vis-types",
   "types": "index.d.ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Types for react-vis",
   "main": "index.js",
   "baseUrl": "types",
