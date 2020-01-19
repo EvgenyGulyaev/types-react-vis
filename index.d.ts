@@ -47,7 +47,7 @@ declare module 'react-vis' {
 
 
     export interface LineSeriesPoint extends AbstractSeriesPoint {
-        x: number;
+        x: string | number;
         y: number;
         color?: string | number;
     }
@@ -264,7 +264,7 @@ declare module 'react-vis' {
         onSeriesClick?: RVMouseEventHandler;
         onSeriesRightClick?: RVMouseEventHandler;
         onNearestX?: RVNearestXEventHandler<T>;
-        onNearestXY?: RVNearestXEventHandler<T>;
+        onNearestXY?: RVNearestXYEventHandler<T>;
         style?: CSSProperties; //default: {}
         animation?: string | {
             stiffness?: number;
@@ -523,7 +523,12 @@ declare module 'react-vis' {
         top?: number;
         left?: number;
         title?: string;
-        style?: CSSProperties;
+        style?: CSSProperties & {
+            line?: CSSProperties;
+            text?: CSSProperties;
+            ticks?: CSSProperties;
+            title?: CSSProperties;
+        };
         className?: string;
         hideTicks?: boolean;
         hideLine?: boolean;
@@ -545,6 +550,17 @@ declare module 'react-vis' {
     }
     export const XAxis: SFC<XAxisProps>;
 
+    export class ChartLabel extends Component<ChartLabelProps> {}
+
+    export interface ChartLabelProps {
+        text: string;
+        className?: string;
+        includeMargin?: boolean;
+        xPercent?: number;
+        yPercent?: number;
+        style?: CSSProperties;
+    }
+
     export interface YAxisProps {
         orientation?: 'left' | 'right'; //default: 'left'
         attr?: string; //default: 'y'
@@ -554,7 +570,12 @@ declare module 'react-vis' {
         top?: number;
         left?: number;
         title?: string;
-        style?: CSSProperties;
+        style?: CSSProperties & {
+            line?: CSSProperties;
+            text?: CSSProperties;
+            ticks?: CSSProperties;
+            title?: CSSProperties;
+        };
         className?: string;
         hideTicks?: boolean;
         hideLine?: boolean;
